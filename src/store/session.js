@@ -23,7 +23,7 @@ export const authenticate = () => async (dispatch) => {
     const data = await response.json();
     console.log(data);
     if (data.errors) {
-      return;
+      return data;
     }
 
     dispatch(setUser(data));

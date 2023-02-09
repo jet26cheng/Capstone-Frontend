@@ -25,14 +25,14 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      try {
-        await dispatch(authenticate());
-        setLoaded(true);
-      } catch (error) {
-        return { error: error.toString() };
-      }
-      // await dispatch(authenticate());
-      // setLoaded(true);
+      // try {
+      //   await dispatch(authenticate());
+      //   setLoaded(true);
+      // } catch (error) {
+      //   return { error: error.toString() };
+      // }
+      await dispatch(authenticate());
+      setLoaded(true);
     })();
   }, [dispatch]);
 
